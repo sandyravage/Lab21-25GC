@@ -1,0 +1,42 @@
+﻿@model MySecondWebsite.Models.Person
+
+<div class="">
+    <h1>REGISTER</h1>
+
+    <form action="@Url.Action("Welcome", "Home")" method="post">
+        <fieldset>
+            <label for="firstname">First Name: </label>
+            <input class="" type="text" id="lame" name="firstname" required pattern="[A-Z]\w+" />
+            <label for="lastname">Last Name: </label>
+            <input class="" type="text" id="lame2" name="lastname" required pattern="[A-Z]\w+" />
+            <label for="" class="">Email: </label>
+            <input class="" type="email" id="lame3" name="firstname" required pattern="[A-Z]\w+" />
+            <label for="" class="">Telephone: </label>
+            <input class="" type="tel" id="lame4" name="firstname" required pattern="[A-Z]\w+" />
+            <label for="lovemeter" class=""></label>
+            <input class="" type="radio" id="lame5" name="lovemeter" required/>
+            <input class="" type="radio" id="lame5" name="lovemeter" required/>
+            <input class="" type="radio" id="lame5" name="lovemeter" required/>
+            <label for="" class=""></label>
+            <select name="">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <label for="" class=""></label>
+            <input class="" type="password" id="lame4" name="password1" required />
+            <label for="" class=""></label>
+            <input class="" type="password" id="lame4" name="password2" required />
+
+
+            <label for="" class=""></label>
+            <input class="" type="text" id="lame7" name="firstname" required pattern="[A-Z]\w+" />
+            <label for="" class=""></label>
+            <input class="" type="text" id="lame8" name="firstname" required pattern="[A-Z]\w+" />
+            <button type="submit" class="">Submit</button>
+            @*<input class="" type="submit" value="Submit" />*@
+        </fieldset>
+    </form>
+</div>
+<script src="~/Scripts/site.js"></script>

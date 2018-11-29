@@ -152,6 +152,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\register.css" />
     <Content Include="Content\scientology-icon.png" />
     <Content Include="Content\scientology-logo-dark_en.png" />
     <Content Include="Content\totallynot.gif" />

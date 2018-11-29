@@ -1,42 +1,62 @@
 ﻿@model MySecondWebsite.Models.Person
-
+@Styles.Render("~/Content/register.css")
 <div class="">
-    <h1>REGISTER</h1>
-
-    <form action="@Url.Action("Welcome", "Home")" method="post">
-        <fieldset>
-            <label for="firstname">First Name: </label>
-            <input class="" type="text" id="lame" name="firstname" required pattern="[A-Z]\w+" />
-            <label for="lastname">Last Name: </label>
-            <input class="" type="text" id="lame2" name="lastname" required pattern="[A-Z]\w+" />
-            <label for="" class="">Email: </label>
-            <input class="" type="email" id="lame3" name="firstname" required pattern="[A-Z]\w+" />
-            <label for="" class="">Telephone: </label>
-            <input class="" type="tel" id="lame4" name="firstname" required pattern="[A-Z]\w+" />
-            <label for="lovemeter" class=""></label>
-            <input class="" type="radio" id="lame5" name="lovemeter" required/>
-            <input class="" type="radio" id="lame5" name="lovemeter" required/>
-            <input class="" type="radio" id="lame5" name="lovemeter" required/>
-            <label for="" class=""></label>
-            <select name="">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
-            </select>
-            <label for="" class=""></label>
-            <input class="" type="password" id="lame4" name="password1" required />
-            <label for="" class=""></label>
-            <input class="" type="password" id="lame4" name="password2" required />
-
-
-            <label for="" class=""></label>
-            <input class="" type="text" id="lame7" name="firstname" required pattern="[A-Z]\w+" />
-            <label for="" class=""></label>
-            <input class="" type="text" id="lame8" name="firstname" required pattern="[A-Z]\w+" />
-            <button type="submit" class="">Submit</button>
-            @*<input class="" type="submit" value="Submit" />*@
-        </fieldset>
-    </form>
+    <h1 style="text-align:center;">REGISTER</h1>
+    <div class="formcontainer">
+        <form action="@Url.Action("Welcome", "Home")" method="post">
+            <fieldset>
+                <label for="firstname">First Name: </label><span></span>
+                <input class="" type="text" id="lame" name="firstname" required pattern="[A-Z]\w+" placeholder="Your name..." />
+                <label for="lastname">Last Name: </label><span></span>
+                <input class="" type="text" id="lame2" name="lastname" required pattern="[A-Z]\w+" placeholder="Your last name..." />
+                <label for="" class="">Email: </label>
+                <input class="" type="email" id="lame3" name="email" placeholder="Your email..." />
+                <label for="" class="">Telephone: </label>
+                <input class="" type="tel" id="lame4" name="phone" placeholder="Your phone number..." />
+                <label for="" class="">Social Security Number: </label>
+                <input class="" type="text" id="lame5" name="ssn" placeholder="Your SSN..." />
+                <label for="" class="">Frequently used security question answer: </label>
+                <input class="" type="text" id="lame6" name="fusqa" placeholder="A frequent answer you use..." />
+                <label for="xenu" class="">Have you heard of lord Xenu?</label>
+                <input class="" type="radio" id="lame7" name="xenu" value="1" checked/>Yes
+                <input class="" type="radio" id="lame8" name="xenu" value="0" />No
+                <br />
+                <br />
+                <label for="devotion" class="">What is your level of devotion to (not)Scientology?</label>
+                <select class="" name="devotion" id="lame9" required>
+                    <option value="" disabled selected>Level of devotion:</option>
+                    <option value="Little">I need some auditing</option>
+                    <option value="Lot">Starting not to ask questions and suppress doubts</option>
+                    <option value="Full">I got mad thetans bro</option>
+                    <option value="Zealot">Take my money L-Ron daddy</option>
+                </select>
+                <label for="percentage" class="">How much of your time can you give to (not)Scientology?</label>
+                <input oninput="x.value=parseInt(percentage.value)" id="lame9" name="percentage" type="range" list="tickmarks" min="0" max="100" value="0"><output name="x" for="percentage">0</output><span>%</span>
+                <datalist id="tickmarks">
+                    <option value="0">
+                    <option value="10">
+                    <option value="20">
+                    <option value="30">
+                    <option value="40">
+                    <option value="50">
+                    <option value="60">
+                    <option value="70">
+                    <option value="80">
+                    <option value="90">
+                    <option value="100">
+                </datalist>
+                <br />
+                <label for="color" class="">Choose your favorite color: </label>
+                <input oninput="y.value=color.value" id="lame10" class="" type="color" name="color" /><span> </span><output name="y" for="color">#000000</output>
+                <br />
+                <br />
+                <label for="password1" class="">Choose a password: </label>
+                <input class="" type="password" id="lame11" name="password1" required placeholder="Enter a password..." />
+                <label for="password2" class="">Enter password again to confirm: </label>
+                <input class="" type="password" id="lame12" name="password2" required placeholder="Confirm password..."/>
+                <input class="" style="margin:0 auto 0 auto; display:block;" type="submit" value="Submit" />
+            </fieldset>
+        </form>
+    </div>
 </div>
 <script src="~/Scripts/site.js"></script>

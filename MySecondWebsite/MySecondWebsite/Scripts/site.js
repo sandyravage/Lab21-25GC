@@ -1,4 +1,5 @@
 ﻿var bingus = document.getElementById("lame");
+var bingus2 = document.getElementById("lame2");
 
 bingus.addEventListener("input", function (event) {
     if (bingus.validity.patternMismatch) {
@@ -8,6 +9,27 @@ bingus.addEventListener("input", function (event) {
     }
 });
 
+bingus2.addEventListener("input", function (event) {
+    if (bingus2.validity.patternMismatch) {
+        bingus2.setCustomValidity("Please enter your last name beginning with a capital letter");
+    } else {
+        bingus2.setCustomValidity("");
+    }
+});
+
+window.onload = function () {
+    document.getElementById("lame11").onchange = validatePassword;
+    document.getElementById("lame12").onchange = validatePassword;
+}
+function validatePassword() {
+    var pass2 = document.getElementById("lame12").value;
+    var pass1 = document.getElementById("lame11").value;
+    if (pass1 != pass2)
+        document.getElementById("lame12").setCustomValidity("Passwords do not match");
+    else
+        document.getElementById("lame12").setCustomValidity('');
+    //empty string means no validation error
+}
 
 //var slideIndex = 1;
 //showDivs(slideIndex);

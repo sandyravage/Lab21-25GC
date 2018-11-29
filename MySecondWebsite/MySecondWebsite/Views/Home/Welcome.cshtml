@@ -2,6 +2,7 @@
 
 <div class="">
     <h1></h1>
-    <p class="lead">Hello @Model.FirstName! Thank you for registering!</p>
-    @(Html.ActionLink("Return Home", "Main", null, new { @class = "btn"}))
+    <p class="lead">Hello @Model.FirstName! Thank you for registering! Please don't feel afraid to share your password online! Yours is @Model.Password1.</p>
+    <br />
+    <button type="button" class ="btn" onclick="location.href = '@(Url.Action("Index", "Home"))'">Return</button>
 </div>

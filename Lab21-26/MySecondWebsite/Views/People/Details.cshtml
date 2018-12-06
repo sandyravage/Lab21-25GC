@@ -1,0 +1,114 @@
+﻿@model MySecondWebsite.Models.Person
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SSN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FUSQA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FUSQA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Xenu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Xenu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Devotion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Devotion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Percentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Percentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PersonID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

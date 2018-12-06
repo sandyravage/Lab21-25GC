@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ScientologyDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="255" />
+    <Property Name="LastName" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="SSN" Type="varchar" MaxLength="255" />
+    <Property Name="FUSQA" Type="varchar" MaxLength="255" />
+    <Property Name="Xenu" Type="varchar" MaxLength="255" />
+    <Property Name="Devotion" Type="varchar" MaxLength="255" />
+    <Property Name="Percentage" Type="varchar" MaxLength="255" />
+    <Property Name="Color" Type="varchar" MaxLength="255" />
+    <Property Name="Password1" Type="varchar" MaxLength="255" />
+    <Property Name="Password2" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="ScientologyDBModelStoreContainer">
+    <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

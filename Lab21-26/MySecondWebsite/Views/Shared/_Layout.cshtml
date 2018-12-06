@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Generic StoreFront</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navwrapper">
+
+        <div class="navwrapper2" onclick="location.href = '@Url.Action("Index", "Home")'">
+            <img style="width:60px; height:60px; margin-left:12%" src="~/Content/scientology-icon.png" />
+            <div style="position:relative;">
+                <img style="top:0; left:0; width:50%" src="~/Content/scientology-logo-dark_en.png" />
+                <img style="transform:rotate(-20deg); height:25px; width:50px; position:absolute; top:0px; left:2px;" src="~/Content/totallynot.gif" />
+            </div>
+        </div>
+
+        <nav class="topnav">
+            <span class="no">Menu</span>
+            <a href="@Url.Action("LRon", "Home")">L Ron Cupboard</a>
+            <a href="@Url.Action("About", "Home")">What is Scientology?</a>
+            <a href="@Url.Action("Create", "People")">Join our <p style="text-decoration:line-through; display:inline;">Cult</p> Organization!</a>
+            <a href="@Url.Action("Churches", "Home")">Churches</a>
+            <a href="@Url.Action("Today", "Home")">Scientology Today</a>
+            <a href="@Url.Action("Index", "Items")">Store</a>
+            <a href="@Url.Action("FAQ", "Home")">FAQ</a>
+            <img id="toggle" class="toggle" src="~/Content/bars.png" />
+        </nav>
+
+    </div>
+
+    <div class="body-content">
+        @RenderBody()
+        <br />
+        <br />
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - (Totally Not) Scientology</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/Scripts/site.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

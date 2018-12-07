@@ -18,5 +18,6 @@ namespace MySecondWebsite.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public Nullable<decimal> Price { get; set; }
+        public string PictureString { get; set; }
     }
 }

@@ -8,6 +8,7 @@
     <Property Name="Name" Type="varchar" MaxLength="255" />
     <Property Name="Description" Type="varchar" MaxLength="255" />
     <Property Name="Price" Type="money" />
+    <Property Name="PictureString" Type="varchar" MaxLength="255" />
   </EntityType>
   <EntityContainer Name="ScientologyDBModel1StoreContainer">
     <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />

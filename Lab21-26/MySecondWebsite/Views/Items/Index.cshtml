@@ -4,37 +4,64 @@
     ViewBag.Title = "Index";
 }
 
-<h2 style="text-align:center">Store</h2>
-<h3 style="text-align:center">Welcome to the (not)Scientology Virtual Storefront!</h3>
-<div class="container">
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th></th>
-        </tr>
+@*<div class="container">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th></th>
+            </tr>
 
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        $@Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>*@
+
+<div class="sscontainer" style="height:600px; max-width: 1100px; margin: 2.5px auto 10px auto; outline: 5px solid; outline-offset:-1px; position:relative;">
+    <div style="width:70%; height:100%; position:absolute;">
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    $@Html.DisplayFor(modelItem => item.Price)
-                </td>
-            </tr>
+            <img class="mySlides" src="@Url.Content(item.PictureString)" style="width:100%; height:100%;">
         }
 
-    </table>
+        <button style="height:101%" class="ssbutton display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button style="height:101%" class="ssbutton display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <div style="width:30%; height:100%; background-color: #326188; z-index: -1; opacity:.4; position:absolute; right:0;">
+
+    </div>
+    <div style="width:28%; height:97%; background-color:#d7e1ea; display:inline-block; position:absolute; right:1%; top: 1.5%; border-radius: 3px;">
+        @foreach (var item in Model)
+        {   
+            <div class="myText" style="width:100%; height:100%; display:none; text-align:center;">
+            <h1>@item.Name</h1>
+                <h2>@item.Description</h2>
+                <h3>@Html.Raw(String.Format("{0:C}", item.Price))</h3>
+            </div>
+        }
+        <button></button>
+    </div>
+    
 </div>
+
+@Scripts.Render("~/Scripts/store.js")

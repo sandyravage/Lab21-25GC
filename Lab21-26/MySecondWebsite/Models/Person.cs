@@ -51,11 +51,11 @@ namespace MySecondWebsite.Models
         public static List<SelectListItem> getItems() { 
             List<SelectListItem> items = new List<SelectListItem>() {
 
-                new SelectListItem { Text = "Select your level of devotion: ", Value = "Little", Selected = true, Disabled = true},
+                new SelectListItem { Text = "Select your level of devotion: ", Value = "", Selected = true, Disabled = true},
                 new SelectListItem { Text = "What is scientology", Value = "Little"},
                 new SelectListItem { Text = "Could use a little auditing", Value = "Much" },
                 new SelectListItem { Text = "Thetan purge incoming", Value = "Devoted"},
-                new SelectListItem { Text = "Take my money L Ron Daddy", Value = "Zealot" },
+                new SelectListItem { Text = "Take my money L. Ron daddy", Value = "Zealot" },
             };
 
             return items;

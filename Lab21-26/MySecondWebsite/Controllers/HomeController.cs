@@ -24,7 +24,6 @@ namespace MySecondWebsite.Controllers
             return View();
         }
 
-        [HttpPost]
         public ActionResult Welcome(Person person)
         {
             ViewBag.Title = "Welcome";

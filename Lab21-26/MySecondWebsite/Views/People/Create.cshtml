@@ -7,16 +7,16 @@
 @Styles.Render("~/Content/register.css")
 <h2 style="text-align:center">Register</h2>
 <div class="formcontainer">
-    @using (Html.BeginForm("Welcome", "Home", FormMethod.Post))
+    @using (Html.BeginForm("Create", "People", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
 
-        @Html.ValidationSummary(true, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+        @Html.ValidationSummary(false, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
         <div>
             @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "" })
             <div>
                 @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "", placeholder = "Your first name..."} })
-                @Html.ValidationMessageFor(model => model.FirstName, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.FirstName, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
         </div>
 
@@ -24,16 +24,15 @@
             @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = "Your last name..." } })
-                @Html.ValidationMessageFor(model => model.LastName, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.LastName, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
-            <br />
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", type = "email", placeholder = "Your e-mail address..."} })
-                @Html.ValidationMessageFor(model => model.Email, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.Email, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
         </div>
 
@@ -41,7 +40,7 @@
             @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", type = "tel", placeholder = "Your telephone number..."} })
-                @Html.ValidationMessageFor(model => model.Phone, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.Phone, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
         </div>
 
@@ -49,7 +48,7 @@
             @Html.LabelFor(model => model.SSN, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SSN, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Social Security Number..."} })
-                @Html.ValidationMessageFor(model => model.SSN, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.SSN, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
         </div>
 
@@ -57,7 +56,7 @@
             @Html.LabelFor(model => model.FUSQA, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FUSQA, new { htmlAttributes = new { @class = "form-control", placeholder = "A frequently used security question answer..."} })
-                @Html.ValidationMessageFor(model => model.FUSQA, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.FUSQA, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
         </div>
 
@@ -66,15 +65,16 @@
             <div class="col-md-10">
                 @Html.RadioButtonFor(model => model.Xenu, "Yes") Yes
                 @Html.RadioButtonFor(model => model.Xenu, "No") No
-                @Html.ValidationMessageFor(model => model.Xenu, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.Xenu, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
+            <br />
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Devotion, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("Devotion", Person.getItems(), new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Devotion, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.Devotion, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
         </div>
 
@@ -82,7 +82,7 @@
             @Html.LabelFor(model => model.Percentage, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Percentage, new { htmlAttributes = new { @class = "form-control", type = "range", oninput = "x.value=parseInt(Percentage.value)", list = "tickmarks", min = "0", max = "100", @Value = "0" } })<output name="x" for="Percentage">0</output><span>%</span>
-                @Html.ValidationMessageFor(model => model.Percentage, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.Percentage, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
                 <datalist id="tickmarks">
                     <option value="0">
                     <option value="10">
@@ -103,7 +103,7 @@
             @Html.LabelFor(model => model.Color, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Color, new { htmlAttributes = new { @class = "form-control", type = "color", oninput = "y.value=Color.value" } })<span> </span><output name="y" for="Color">#000000</output>
-                @Html.ValidationMessageFor(model => model.Color, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.Color, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
         </div>
 
@@ -111,7 +111,7 @@
             @Html.LabelFor(model => model.Password1, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Password1, new { htmlAttributes = new { @class = "form-control", id = "lame11", type = "password", placeholder = "Please enter a password..."} })
-                @Html.ValidationMessageFor(model => model.Password1, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.Password1, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
         </div>
 
@@ -119,7 +119,7 @@
             @Html.LabelFor(model => model.Password2, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Password2, new { htmlAttributes = new { @class = "form-control", id = "lame12", type = "password", placeholder = "Enter again to confirm..." } })
-                @Html.ValidationMessageFor(model => model.Password2, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })
+                @*@Html.ValidationMessageFor(model => model.Password2, "", new { style = "color:red; font-size:small; box-sizing:border-box; padding:0; margin:0;" })*@
             </div>
         </div>
 

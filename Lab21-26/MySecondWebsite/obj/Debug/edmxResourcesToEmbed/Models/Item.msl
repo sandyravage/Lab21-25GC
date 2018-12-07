@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Items">
       <EntityTypeMapping TypeName="ScientologyDBModel1.Item">
         <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="PictureString" ColumnName="PictureString" />
           <ScalarProperty Name="ItemID" ColumnName="ItemID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Description" ColumnName="Description" />

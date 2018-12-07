@@ -7,7 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body style=" font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;">
     <div class="navwrapper">
 
         <div class="navwrapper2" onclick="location.href = '@Url.Action("Index", "Home")'">
@@ -20,7 +20,7 @@
 
         <nav class="topnav">
             <span class="no">Menu</span>
-            <a href="@Url.Action("LRon", "Home")">L Ron Cupboard</a>
+            <a href="@Url.Action("LRon", "Home")">L. Ron's Cupboard</a>
             <a href="@Url.Action("About", "Home")">What is Scientology?</a>
             <a href="@Url.Action("Create", "People")">Join our <p style="text-decoration:line-through; display:inline;">Cult</p> Organization!</a>
             <a href="@Url.Action("Churches", "Home")">Churches</a>
@@ -38,11 +38,10 @@
         <br />
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - (Totally Not) Scientology</p>
+            <p>&copy; @DateTime.Now.Year - (Totally Not) Scientology. All Rights Reserved.</p>
+
         </footer>
     </div>
-
-    @Scripts.Render("~/Scripts/site.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -8,6 +8,7 @@
     <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PictureString" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="ScientologyDBEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Items" EntityType="Self.Item" />
